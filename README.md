@@ -63,6 +63,7 @@ ALLOW_LOCAL_MEDIA_PATHS=false
 - `X_AUTH_TOKEN`: value of the `auth_token` cookie from your logged-in X account.
 - `X_CT0`: value of the `ct0` cookie from the same X session.
 - `X_WEB_BEARER_TOKEN`: value of the `authorization: Bearer ...` header used by normal x.com web requests.
+- Copy the values for `auth_token` and `ct0`. Cookies generally last around 12 months before needing rotation.
 - Keep `.env` private. It is ignored by git.
 
 ## 3. Run
