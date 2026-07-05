@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "x-publisher-service"
+version = "0.1.0"
+description = "FastAPI X/Twitter web-session publisher with tweet, thread, media upload, and delete support."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+  { name = "Inside Lore" }
+]
+keywords = ["x", "twitter", "automation", "fastapi", "media-upload"]
+dependencies = [
+  "beautifulsoup4>=4.12.3",
+  "curl_cffi>=0.15.0",
+  "fastapi>=0.110.0",
+  "python-dotenv>=1.0.1",
+  "uvicorn[standard]>=0.27.0",
+  "xclienttransaction>=1.0.2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "httpx>=0.26.0",
+  "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.hatch.build.targets.wheel]
+packages = ["execution"]
