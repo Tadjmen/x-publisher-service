@@ -22,7 +22,7 @@ def configure_env(monkeypatch) -> None:
     monkeypatch.setenv("X_AUTH_TOKEN", "auth")
     monkeypatch.setenv("X_CT0", "ct0")
     monkeypatch.setenv("X_WEB_BEARER_TOKEN", "bearer")
-    monkeypatch.delenv("ALLOW_LOCAL_MEDIA_PATHS", raising=False)
+    monkeypatch.setenv("ALLOW_LOCAL_MEDIA_PATHS", "false")
 
 
 def test_tweet_endpoint_posts_text(monkeypatch) -> None:
